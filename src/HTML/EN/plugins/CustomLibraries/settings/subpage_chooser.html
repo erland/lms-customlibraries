@@ -1,5 +1,5 @@
 [% WRAPPER settingGroup title="SETUP_PLUGIN_CUSTOMLIBRARIES_GROUP" desc="" %]
-	<div class="prefDesc">[% "SETUP_PLUGIN_CUSTOMLIBRARIES_GROUP_DESC" | string %][% IF licensemanager and licensed %][% ELSIF licensemanager and !licensed %]<br><br><b><a href="[% webroot %]plugins/LicenseManagerPlugin/settings/basic.html">[% "PLUGIN_CUSTOMLIBRARIES_LICENSE_REQUIRED" | string %]</a></b>[% END %]</div>
+	<div class="prefDesc">[% "SETUP_PLUGIN_CUSTOMLIBRARIES_GROUP_DESC" | string %]<!--[% IF licensemanager and licensed %][% ELSIF licensemanager and !licensed %]<br><br><b><a href="[% webroot %]plugins/LicenseManagerPlugin/settings/basic.html">[% "PLUGIN_CUSTOMLIBRARIES_LICENSE_REQUIRED" | string %]</a></b>[% END %]--></div>
 [% END %]
 [% IF subpages.size>1 %]
 [% WRAPPER settingGroup title="SETUP_PLUGIN_CUSTOMLIBRARIES_SECTION" desc="SETUP_PLUGIN_CUSTOMLIBRARIES_SECTION_DESC" %]

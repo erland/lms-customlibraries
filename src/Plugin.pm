@@ -542,9 +542,9 @@ sub handleWebList {
 	$params->{'pluginCustomLibrariesLibraries'} = \@weblibraries;
 	$params->{'pluginCustomLibrariesVersion'} = $PLUGINVERSION;
 
-	$params->{'licensemanager'} = isPluginsInstalled($client,'LicenseManagerPlugin');
-	my $request = Slim::Control::Request::executeRequest($client,['licensemanager','validate','application:CustomLibraries']);
-	$params->{'licensed'} = $request->getResult("result");
+	$params->{'licensemanager'} = 1; #isPluginsInstalled($client,'LicenseManagerPlugin');
+	#my $request = Slim::Control::Request::executeRequest($client,['licensemanager','validate','application:CustomLibraries']);
+	$params->{'licensed'} = 1; #$request->getResult("result");
 
 	if(defined($params->{'redirect'})) {
 		return Slim::Web::HTTP::filltemplatefile('plugins/CustomLibraries/customlibraries_redirect.html', $params);
